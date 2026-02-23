@@ -1,0 +1,96 @@
+=====================================================================
+
+
+                2026 INTERNATIONAL PLANNING COMPETITION
+
+                            (IPC 2026)
+
+
+                            NUMERIC TRACK
+
+
+                Preliminary Schedule and Call for Domains
+
+
+=====================================================================
+
+
+We are delighted to announce that the International Conference on Planning and
+Scheduling (ICAPS) 2026 in Dublin will host the next iteration of the numeric
+track of the International Planning Competition (IPC).
+
+The objective is to empirically evaluate state-of-the-art planning systems on a
+number of benchmark problems. The goals of the IPC are to promote planning
+research, highlight challenges in the planning community, and provide new and
+interesting problems as benchmarks for future research.
+
+
+Call for domains instructions
+------------------------------------------------------------------------------
+
+If you are interested in designing a domain for the competition, or you already
+have something to share, please contact us before the Domain submission deadline
+(see below). We will then run some checks to see if the domain is suitable for
+the IPC, and ask you to think about the ability to easily scale problem difficulty.
+If you don't have a domain yourself, but you can think of someone who might have
+an interesting planning problem, please share this call with them.
+
+While not necessary, it is desirable for the domains to be related to real
+applications. Moreover, if a domain-dependent planner for the submitted domain
+is available, please include it in the submission.
+
+We will consider all submissions and select the highest quality subset to be
+included. We are aware that participants who submit a domain that is used
+have some advantage with respect to performance on that domain. We view this
+as a good incentive for teams to submit high-quality proposals.
+
+Since one of the goals of the IPC is to provide a new (publicly available)
+set of benchmarks for future research, we plan to publish all domains
+selected for IPC 2026 in a public repository. By submitting a domain,
+you agree to this and give us the right to do so. We recommend that you
+also license your domain under a permissive license such as CC-0 so
+that others can use and build on your domain.
+
+If you have a domain in mind, but have doubts about whether it would be
+appropriate for the IPC, don't hesitate to contact us!
+
+
+
+PDDL fragment and tracks
+------------------------------------------------------------------------------
+
+We will adopt the same numeric fragment of the last IPC
+(see https://ipc2023-numeric.github.io/). That is, we target two fragments of
+PDDL2.1 level 1, which are referred to as Simple and Linear Numeric Planning
+(SNP and LNP). As you may be well aware, SNP allows linear expressions in
+preconditions and goals and restricts actions’ effects to increase or decrease
+variables by a constant, while LNP also allows linear expressions in the
+right-hand side of actions’ effects. Moreover, actions will have an associated
+state-independent non-negative cost, so optimal plans are those where the sum
+of action costs is minimal.
+
+
+We plan to have three different sub-tracks: Optimal, Satisficing, and Agile, depending
+on the number and type of submissions received.
+
+
+Preliminary schedule
+------------------------------------------------------------------------------
+
+Domain submission deadline: March 31, 2026
+Planner submission deadline: May 10, 2026
+Planner abstract submission deadline: June 10, 2026
+Contest run: May - June, 2026
+Results announced: June, 2026
+
+Registration - we will soon share the instructions for the registration
+process via email and on the website for the competition
+(https://ipc2026-numeric.github.io/).
+
+
+Luigi Bonassi (luigibonassi@robots.ox.ac.uk)
+Francesco Percassi (f.percassi@hud.ac.uk)
+Joan Espasa Arxer (jea20@st-andrews.ac.uk)
+Enrico Scala (enrico.scala@unibs.it)
+
+=====================================================================
