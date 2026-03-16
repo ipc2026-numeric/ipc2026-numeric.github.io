@@ -53,7 +53,7 @@ Please forward the following calls to all interested parties.
 - If that happens in more than one domain, the entry is disqualified.
 
 ## PDDL Fragment
-Similarly to the Numeric IPC 2023 (https://ipc2023-numeric.github.io/), we will use a subset of PDDL 2.1, considering two fragments:
+Similarly to the Numeric IPC 2023 (https://ipc2023-numeric.github.io), we will use a subset of PDDL 2.1, considering two fragments:
 - Simple Numeric Planning (SNP): Numeric variables can only be increased or decreased by a constant using the increase and decrease operations.
 - Linear Numeric Planning (LNP): In addition to SNP, numeric variables can now be also assigned directly using the assign operator and the right-hand of an effect can now be a linear combination.
 
