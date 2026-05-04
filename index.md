@@ -18,7 +18,7 @@ Please forward the following calls to all interested parties.
 | Event                                   | Date |
 |:----------------------------------------|:-----|
 | Domain submission deadline              | March 31, 2026 |
-| Planner submission deadline             | May 10, 2026 |
+| Planner submission deadline             | May 15, 2026 |
 | Planner abstract submission deadline    | June 10, 2026 |
 | Contest run                             | May - June, 2026 |
 | Results announced                       | June / July 2026 |
@@ -71,10 +71,18 @@ Based on that, we will create a private repository under the ipc2026-numeric org
 ## Planner Submission
 Competitors must submit the source code of their planners. The organisers will run the planners on the competition domains and problems, which will remain unknown to competitors until the evaluation phase. This prevents any fine-tuning of planners to the final benchmark set. Planner repositories will be hosted by the organisers on GitHub under the ipc2026-numeric organisation. These repositories will remain private until the end of the competition, after which they will be made public. Once the competition is concluded, we plan to make all planners, domains, and related data available from a single location.
 
-We require participants to provide self-contained code, with scripts for compilation and running, “compile” and “run”, respectively. Each run script should specify which track the planner should be included in and the supported numeric fragment. Multiple configurations for the same track or fragments are allowed. An example of how to structure your repository and which scripts to include can be found here: https://github.com/ipc2026-numeric/baseline. Should there be any questions about the planner submission, feel free to contact any of the organisers.
+-------- Submission of multiple planner configurations --------
+You are allowed to submit multiple configurations of your planner. However, to keep things balanced and avoid giving an advantage based on the number of configurations, we decided to limit the number of planner configurations to **2 per track**, independently of the supported fragment of numeric planning. We remind you that LNP configurations will be run on the entire benchmark set, while SNP configurations will be evaluated only on SNP domains.
 
-Configurations for SNP will be evaluated only on SNP domains, while LNP configurations will be run on the entire benchmark set.
+In addition, you may submit multiple planner configurations only if they differ in a substantively meaningful way. For example, the same overall search method / heuristic with minor parameter tuning cannot be used for separate configurations. 
 
-We are still investigating the execution environment for the experiments, including the possible adoption of a container platform such as Apptainer (formerly Singularity). In the meantime, participants may assume that planners must compile on a fresh installation of Ubuntu 20.04 / 22.04 LTS. Further details will be provided soon.
+We are aware that the distinction between a genuine variant and a minor modification may be blurred. If you are unsure about what may count as a substantial difference, feel free to send us an email with a brief description of what you intend to submit, and we will be happy to advise.
+
+-------- Execution environment --------
+We require participants to provide self-contained code, with scripts for installation and running. Each run script should specify which track the planner should be included in and the supported numeric fragment. An example of how to structure your repository and which scripts to include can be found here: https://github.com/ipc2026-numeric/baseline. We decided to adopt Apptainer to run all the planners. Therefore, we kindly ask you to include an Apptainer recipe for compiling / installing your planner. Then, your run scripts should simply call the executable produced by building the recipe. 
 The planner must be executable through a script that takes exactly three input parameters, in the following order: the domain file, the problem file, and the name of the file where the last solution found will be saved. The output plan must follow the standard IPC solution format, consisting of a list of actions separated by a new line.
+
+## Bug-Fixing Policy
+
+After the planner submission deadline, we will test all planners on the final benchmark. If we find any bugs, such as failures or crashes, we will give the participants a chance to fix them. We will provide all the necessary information to debug the issue (such as the logs produced by the planner and the PDDL files that we believe caused the issue) and allow the team to push a fix for the bug within a certain time frame. We will verify that the changes are strictly limited to resolving the bug, with no additional features introduced or parameters modified.
 
