@@ -19,7 +19,7 @@ Please forward the following calls to all interested parties.
 |:----------------------------------------|:-----|
 | Domain submission deadline              | March 31, 2026 |
 | Planner submission deadline             | May 15, 2026 |
-| Planner abstract submission deadline    | June 10, 2026 |
+| Planner abstract submission deadline    | ~~June 10, 2026~~ June 20, 2026 (AoE)|
 | Contest run                             | May - June, 2026 |
 | Results announced                       | June / July 2026 |
 
